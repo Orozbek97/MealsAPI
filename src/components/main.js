@@ -15,10 +15,11 @@ const Main = () => {
 
     return (
         <div className={'container'}>
+            <h1> Meals Category</h1>
             <div className={'row'}>
                 {category.map((categories) => (
                     <div key={categories.idCategory} className={'col-4'}>
-                        <Link to={`/category/${categories.strCategory}`}>
+                        <Link to={`/category/${categories.strCategory}`} target={"_blank"}>
                             <div className={'box'}>
                                 <img src={categories.strCategoryThumb} alt=""/>
                                 <h3 style={{fontSize:30,
