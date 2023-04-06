@@ -8,8 +8,8 @@ const Meals = () => {
     useEffect(() => {
         axios
             .get(`https://themealdb.com/api/json/v1/1/lookup.php?i=${params.mealsId}`)
-            .then((response) => {
-                setCategory(response.data.meals);
+            .then(({data}) => {
+                setCategory(data.meals);
             })
     }, []);
 

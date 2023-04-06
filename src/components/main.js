@@ -8,8 +8,8 @@ const Main = () => {
     useEffect(() => {
         axios
             .get('https://themealdb.com/api/json/v1/1/categories.php')
-            .then((response) => {
-                setCategory(response.data.categories);
+            .then(({data}) => {
+                setCategory(data.categories);
             })
     }, []);
 
